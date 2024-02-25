@@ -1,8 +1,9 @@
 #!/bin/bash
 
+PERSON1=ram
+PERSON2=robin
 
-
-echo "ram:: hello robin, how are you?"
-echo "robin:: hello ram, i am fine"
-echo "robin:: how are ram? "
-echo "ram:: i am robin"
+echo "$PERSON1:: hello $PERSON2, how are you?"
+echo "$PERSON2:: hello $PERSON1, i am fine"
+echo "$PERSON2:: how are $PERSON1? "
+echo "$PERSON1:: i am $PERSON2"
