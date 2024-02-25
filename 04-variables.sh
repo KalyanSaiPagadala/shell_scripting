@@ -1,5 +1,5 @@
 #!/bin/bash
 
-DATE=&(date)
+DATE=$(date)
 
 echo "the script started excuting at $DATE"
