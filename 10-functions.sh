@@ -20,10 +20,10 @@ else
     echo "you are using root access"
 fi
 
-yum install mysql -y
+yum install mysqll -y
 
 VALIDATE $? "mysql"
 
-yum install ansible -y
+yum install ansiblle -y
 
-VALIDATE $? "git"
+VALIDATE $? "ansible"
