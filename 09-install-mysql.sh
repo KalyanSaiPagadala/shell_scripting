@@ -10,7 +10,7 @@ else
     echo "you are using root access"
 fi
 
-yum install myql -y
+yum install mysql -y
 
 if [ $? -ne 0 ]
 then 
