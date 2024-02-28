@@ -8,3 +8,12 @@ then
 else
     echo "you are using root access"
 fi
+
+yum install myql -y
+
+if [ $? -ne 0]
+then 
+    echo "mysql not installed successfully"
+else 
+    echo "mysql  installed successfully"
+fi
