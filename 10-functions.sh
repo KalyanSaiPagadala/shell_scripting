@@ -23,3 +23,7 @@ fi
 yum install mysql -y
 
 VALIDATE 
+
+yum install ansible -y
+
+VALIDATE
