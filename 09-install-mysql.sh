@@ -7,3 +7,4 @@ then
     echo "please excecute with root access"
 else
     echo "you are using root access"
+fi
