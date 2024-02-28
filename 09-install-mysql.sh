@@ -4,8 +4,8 @@ ID=$(id -u)
 
 if [ $ID -ne 0 ]
 then
-    echo "please excecute with root access"
-    exit 1
+    echo "Error:: please run the script with root access"
+    exit 1 # you can give other than 0
 else
     echo "you are using root access"
 fi
@@ -14,7 +14,8 @@ yum install mysql -y
 
 if [ $? -ne 0 ]
 then 
-    echo "mysql not installed successfully"
+    echo " Error:: mysql is  not installed successfully"
+    exit 1
 else 
-    echo "mysql  installed successfully"
+    echo "mysql is  installed successfully"
 fi
