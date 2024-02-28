@@ -11,7 +11,7 @@ fi
 
 yum install myql -y
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then 
     echo "mysql not installed successfully"
 else 
