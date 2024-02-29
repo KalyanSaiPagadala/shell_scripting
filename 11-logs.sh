@@ -2,7 +2,7 @@
 
 ID=$(id -u)
 
-TIMESTAMP=$(date +%f-%h-%m-%s)
+TIMESTAMP=$(date +%F-%H-%M-%S)
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
@@ -15,16 +15,16 @@ echo "script started exectuing at $TIMESTAMP" &>>$LOG_FILE
 VALIDATE(){
     if [ $1 -ne 0 ]
 then 
-    echo "$R Error:: $O $2 is $R not installed successfully $O"
+    echo  -e "$R Error:: $O $2 is $R not installed successfully $O"
     exit 1
 else 
-    echo "$2 is $G installed successfully $O"
+    echo  -e "$2 is $G installed successfully $O"
 fi
 }
 
 if [ $ID -ne 0 ]
 then
-    echo "$R Error::$O please run the script with root access"
+    echo  -e "$R Error::$O please run the script with root access"
     exit 1 # you can give other than 0
 else
     echo "you are using root access"
