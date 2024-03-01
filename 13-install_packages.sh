@@ -23,6 +23,7 @@ VALIDATE(){
 if [ $ID -ne 0 ]
 then 
     echo -e "$R ERROR:: $N please run the script with root user"
+    exit 1
 else
     echo "you are running the script using root user"
 fi
@@ -30,7 +31,7 @@ fi
 for PACKAGES in $@
 do
     yum list installed $PACKAGES &>>$LOGFILE
-    if [ $? -ne 0]
+    if [ $? -ne 0 ]
     then 
         yum install $PACKAGES -y &>>$LOGFILE
         VALIDATE $? "installation of $PACKAGES "
