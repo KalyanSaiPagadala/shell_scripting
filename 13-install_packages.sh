@@ -11,13 +11,13 @@ LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 echo "script started exectuing at $TIMESTAMP" &>>$LOGFILE
 
-# VALIDATE(){
-#     if [$1 -ne 0]
-#     then
-#         echo "ERROR:: $2..... $R Failed $N "
-#     else 
-#         echo "$2 .....  $G Success $N"
-# }
+VALIDATE(){
+    if [$1 -ne 0]
+    then
+        echo -e "ERROR:: $2..... $R Failed $N "
+    else 
+        echo -e "$2 .....  $G Success $N"
+}
 
 if [ $ID -ne 0 ]
 then 
@@ -26,14 +26,15 @@ else
     echo "you are running the script using root user"
 fi
 
-# for PACKAGES in $@
-# do
-#     yum list installed $PACKAGES &>>$LOGFILE
-#     if [ $? -ne 0]
-#     then 
-#         yum install $PACKAGES -y &>>$LOGFILE
-#         VALIDATE $? "installation of $PACKAGES "
-#     else 
-#         echo "$PACKAGES alredy installed ...... $Y Skipped $N"
-# done
+for PACKAGES in $@
+do
+    yum list installed $PACKAGES &>>$LOGFILE
+    if [ $? -ne 0]
+    then 
+        yum install $PACKAGES -y &>>$LOGFILE
+        VALIDATE $? "installation of $PACKAGES "
+    else 
+        echo -e  "$PACKAGES alredy installed ...... $Y Skipped $N"
+    fi
+done
 
