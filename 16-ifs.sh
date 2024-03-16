@@ -13,8 +13,8 @@ fi
 
 while IFS=":" read -r f1 f2 f3 f4 f5 f6 f7 
 do
-    echo "username: $f1"
-    echo "user_id : $f5"
-    echo "user_id : $f6"
-    echo "user_id : $f7"
+    echo "user_name: $f1"
+    echo "user_full_name : $f5"
+    echo "home_dir : $f6"
+    echo "shell_path : $f7"
 done < $FILE
