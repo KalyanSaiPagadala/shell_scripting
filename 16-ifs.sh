@@ -5,7 +5,7 @@ FILE=/etc/passwd
 R="\e[31m"
 N="\e[0m"
 
-if  [ ! -d $FILE ]
+if  [ ! -f $FILE ]
 then
     echo -e "$R file is not present $N"
     exit 1
