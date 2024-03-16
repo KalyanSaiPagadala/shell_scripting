@@ -1,13 +1,13 @@
 #!/bin/bash
 
-FILE="/etc/passwd"
+FILE=/etc/passwd
 
 R="\e[31m"
 N="\e[0m"
 
 if  [ ! -d $FILE ]
 then
-    echo -e "$R source dir is not present $N"
+    echo -e "$R file is not present $N"
     exit 1
 fi
 
