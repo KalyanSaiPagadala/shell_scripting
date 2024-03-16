@@ -11,8 +11,10 @@ then
     exit 1
 fi
 
-while IFS=":" read -r username user_id group_id user_full_name
+while IFS=":" read -r f1 f2 f3 f4 f5 f6 f7 
 do
-    echo "username: $username"
-    echo "user_id : $user_id "
+    echo "username: $f1"
+    echo "user_id : $f5"
+    echo "user_id : $f6"
+    echo "user_id : $f7"
 done < $FILE
