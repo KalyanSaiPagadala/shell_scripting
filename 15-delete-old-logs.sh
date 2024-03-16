@@ -8,6 +8,7 @@ N="\e[0m"
 if  [ ! -d $SOURCE_DIR ]
 then
     echo -e "$R source dir is not present $N"
+    exit 1
 fi
 
 $FILE_TO_DEL=$(find $SOURCE_DIR -type f -mtime +14 -name "*.log")
