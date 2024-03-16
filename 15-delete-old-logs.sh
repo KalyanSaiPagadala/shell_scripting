@@ -11,7 +11,7 @@ then
     exit 1
 fi
 
-$FILE_TO_DEL=$(find $SOURCE_DIR -type f -mtime +14 -name "*.log")
+FILE_TO_DEL=$(find $SOURCE_DIR -type f -mtime +14 -name "*.log")
 
 while IFS= read -r line 
 do 
