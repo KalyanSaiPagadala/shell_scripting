@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DISK_USAGE=$(df -hT | grep -vE 'tmp|File' |awk '{print $6}'| cut -d % -f1)
-DISK_THRESHOLD=1
+DISK_THRESHOLD=70
 message=""
 
 while IFS= read -r line 
