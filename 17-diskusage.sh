@@ -8,7 +8,7 @@ while IFS= read -r line
 do 
     if [ $DISK_USAGE -gt $DISK_THRESHOLD ]
     then 
-        message+="High Disk Usage on $partition: $usage <br>"
+        message+="High Disk Usage on $DISK_USAGE <br>"
     fi
 
 done <<< $DISK_USAGE
